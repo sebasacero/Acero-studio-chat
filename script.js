@@ -4,6 +4,28 @@
 const WHATSAPP_NUMBER = "573001234567";
 
 /* ============================================================
+   SCROLLYTELLING — activa cada paso al entrar en pantalla
+   y actualiza los puntos de progreso (solo visibles en desktop)
+============================================================ */
+(function initStoryScroll(){
+  const steps = document.querySelectorAll('.story-step');
+  const dots = document.querySelectorAll('.p-dot');
+  if(!steps.length) return;
+
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        const n = entry.target.dataset.step;
+        dots.forEach(d => d.classList.toggle('active', d.dataset.p === n));
+      }
+    });
+  }, { threshold: 0.4 });
+
+  steps.forEach(step => observer.observe(step));
+})();
+
+/* ============================================================
    SUPABASE (opcional) — ver README para el paso a paso.
    1. Agrega en index.html, antes de este script:
       <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
