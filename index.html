@@ -11,34 +11,115 @@
 </head>
 <body>
 
-<div class="app">
-  <div class="grid-bg"></div>
+<div class="layout">
 
-  <header>
-    <div class="h-top">
-      <div class="brand"><b>acero</b><span>.studio</span></div>
-      <div class="status"><span class="dot"></span> Asistente activo</div>
-    </div>
-    <div class="h-fig">
-      <span>FIG. 00 — REDISEÑO DE CAFETERÍAS</span>
-      <span id="stateTag">estado: bienvenida</span>
-    </div>
-  </header>
+  <!-- ============ IZQUIERDA: SCROLLYTELLING ============ -->
+  <section class="story" id="story">
+    <div class="story-grid-bg"></div>
 
-  <div class="chat" id="chat"></div>
-
-  <div class="composer">
-    <div class="composer-row">
-      <button class="icon-btn" id="btnCamera" title="Tomar foto">📷</button>
-      <button class="icon-btn" id="btnGallery" title="Subir de galería">🖼️</button>
-      <input type="text" class="text-input" id="textInput" placeholder="Escribe un mensaje…">
-      <button class="send-btn" id="btnSend">➤</button>
+    <div class="story-intro">
+      <div class="about-eyebrow"><span class="dot"></span> FIG. 00 — CÓMO FUNCIONA</div>
+      <h1 class="about-h1">Tu cafetería,<br><em>reinventada</em><br>antes de mover un ladrillo.</h1>
+      <p class="about-lead">acero.studio convierte una foto real de tu espacio en una propuesta de rediseño en minutos, y te conecta directo con un asesor para llevarla a obra.</p>
+      <div class="story-scroll-cue"><span class="only-desktop">explora los pasos →</span><span class="only-mobile">desliza para ver cómo ↓</span></div>
     </div>
-    <div class="composer-hint">Enfocado en rediseño de interior y fachada de cafeterías</div>
+
+    <div class="story-steps">
+
+      <article class="story-step" data-step="1">
+        <span class="fig-tag">FIG. 01 — CAPTURA</span>
+        <span class="story-num">01</span>
+        <h2>Sube una foto real</h2>
+        <p>Desde la cámara o la galería. Interior o fachada, tal como está hoy — sin planos, sin medidas, sin renders previos.</p>
+        <div class="story-visual">
+          <div class="sv-frame">
+            <div class="sv-corner tl"></div><div class="sv-corner tr"></div>
+            <div class="sv-corner bl"></div><div class="sv-corner br"></div>
+            <div class="sv-icon">📷</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="story-step" data-step="2">
+        <span class="fig-tag">FIG. 02 — ESTILO</span>
+        <span class="story-num">02</span>
+        <h2>Elige un estilo</h2>
+        <p>Minimalista, industrial, cálido, escandinavo, tropical — o describe el tuyo. Cada opción ajusta materiales, color y luz.</p>
+        <div class="story-visual">
+          <div class="sv-chips">
+            <span>Minimalista</span><span>Industrial</span><span>Cálido</span><span>Escandinavo</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="story-step" data-step="3">
+        <span class="fig-tag">FIG. 03 — GENERACIÓN</span>
+        <span class="story-num">03</span>
+        <h2>La IA genera la propuesta</h2>
+        <p>Mantenemos la estructura real del local — paredes, ventanas, columnas — y solo transformamos acabados, mobiliario y estilo.</p>
+        <div class="story-visual">
+          <div class="sv-scan"><div class="sv-scan-line"></div></div>
+        </div>
+      </article>
+
+      <article class="story-step" data-step="4">
+        <span class="fig-tag">FIG. 04 — CONTACTO</span>
+        <span class="story-num">04</span>
+        <h2>Cotiza por WhatsApp</h2>
+        <p>Con la propuesta lista, hablas directo con un asesor de acero.studio para llevarla a obra: materiales, tiempos y presupuesto.</p>
+        <div class="story-visual">
+          <div class="sv-wa">💬 Enviar a WhatsApp →</div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="story-outro">
+      <p><span class="only-desktop">Pruébalo ahora en el panel de la derecha →</span><span class="only-mobile">Pruébalo ahora ↓</span></p>
+    </div>
+  </section>
+
+  <!-- Puntos de progreso (solo desktop) -->
+  <div class="story-progress" id="storyProgress">
+    <span class="p-dot" data-p="1"></span>
+    <span class="p-dot" data-p="2"></span>
+    <span class="p-dot" data-p="3"></span>
+    <span class="p-dot" data-p="4"></span>
   </div>
 
-  <input type="file" id="fileCamera" accept="image/*" capture="environment">
-  <input type="file" id="fileGallery" accept="image/*">
+  <!-- ============ DERECHA: CHAT ============ -->
+  <section class="chat-panel">
+    <div class="app">
+      <div class="grid-bg"></div>
+
+      <header>
+        <div class="h-top">
+          <div class="brand"><b>acero</b><span>.studio</span></div>
+          <div class="status"><span class="dot"></span> Asistente activo</div>
+        </div>
+        <div class="h-fig">
+          <span>FIG. 05 — ASISTENTE</span>
+          <span id="stateTag">estado: bienvenida</span>
+        </div>
+      </header>
+
+      <div class="chat" id="chat"></div>
+
+      <div class="composer">
+        <div class="composer-row">
+          <button class="icon-btn" id="btnCamera" title="Tomar foto">📷</button>
+          <button class="icon-btn" id="btnGallery" title="Subir de galería">🖼️</button>
+          <input type="text" class="text-input" id="textInput" placeholder="Escribe un mensaje…">
+          <button class="send-btn" id="btnSend">➤</button>
+        </div>
+        <div class="composer-hint">Enfocado en rediseño de interior y fachada de cafeterías</div>
+      </div>
+
+      <input type="file" id="fileCamera" accept="image/*" capture="environment">
+      <input type="file" id="fileGallery" accept="image/*">
+    </div>
+  </section>
+
 </div>
 
 <script src="script.js"></script>
