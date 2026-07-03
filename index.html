@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>acero.studio — Rediseña tu cafetería</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <div class="grid-bg"></div>
+
+  <header>
+    <div class="h-top">
+      <div class="brand"><b>acero</b><span>.studio</span></div>
+      <div class="status"><span class="dot"></span> Asistente activo</div>
+    </div>
+    <div class="h-fig">
+      <span>FIG. 00 — REDISEÑO DE CAFETERÍAS</span>
+      <span id="stateTag">estado: bienvenida</span>
+    </div>
+  </header>
+
+  <div class="chat" id="chat"></div>
+
+  <div class="composer">
+    <div class="composer-row">
+      <button class="icon-btn" id="btnCamera" title="Tomar foto">📷</button>
+      <button class="icon-btn" id="btnGallery" title="Subir de galería">🖼️</button>
+      <input type="text" class="text-input" id="textInput" placeholder="Escribe un mensaje…">
+      <button class="send-btn" id="btnSend">➤</button>
+    </div>
+    <div class="composer-hint">Enfocado en rediseño de interior y fachada de cafeterías</div>
+  </div>
+
+  <input type="file" id="fileCamera" accept="image/*" capture="environment">
+  <input type="file" id="fileGallery" accept="image/*">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
