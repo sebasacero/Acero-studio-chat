@@ -1,3 +1,4 @@
+
 /* ============================================================
    CONFIG — edita aquí el número de WhatsApp (código país + número, sin + ni espacios)
 ============================================================ */
@@ -221,8 +222,7 @@ function sendText(){
 }
 
 start();
-
-/* ============================================================
+ ============================================================
    FUNCIÓN LISTA PARA SUPABASE — descomenta cuando tengas el
    cliente configurado arriba. Sube la imagen al Storage y
    guarda el lead en la tabla `leads`. Ver README para el SQL.
@@ -259,4 +259,6 @@ async function saveLeadToSupabase({ style, imageFile }){
   }
 }
 
-============================================================ */
+
+
+
